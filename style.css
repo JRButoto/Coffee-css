@@ -1,0 +1,195 @@
+/* html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
+* {
+box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+.page_layout {
+    display: grid;
+    grid-template-columns: 10px auto 30px auto 10px;
+    grid-template-rows: 60px 40px 130px 30px 140px 35px 70px 130px 10px 40px 10px;
+    grid-template-areas: 
+    "header header header header header"
+    ". . . . ."
+    ". item_side . name_side ."
+    ". item_side . . ."
+    ". item_side . payment_side ."
+    ". . . payment_side ."
+    ". . . . ."
+    ". tax_side tax_side tax_side ."
+    ". . . . ."
+    ". place_order place_order place_order .";  
+}
+
+.page_header {
+    grid-area: header;
+    background-color: #43281d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page_header img {
+    max-width: calc(100% - 10%);
+    max-height: calc(100% - 10%);
+}
+
+.page_header .header-text {
+    margin-left: 10px; /* Adjust margin as needed */
+    color: #fcf3c1;
+}
+
+.item_layout {
+    grid-area: item_side;
+    position: relative;
+    background-color: #ece0d5;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    margin: 0;
+    color: #7d5f4b;
+    
+}
+
+.name_layout {
+    grid-area: name_side;
+    background-color: #ece0d5;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.input_group input {
+    position: relative;
+    top: 80px;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 30%;
+    background-color: transparent;
+    border: 2px #43281d solid;
+    padding: 12px;
+    border-radius: 30px;
+    
+}
+
+.input_group label{
+    display: block;
+    position: absolute;
+    top: 44%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    background: #ece0d5;
+    color: #7d5f4b;
+    border: 2px transparent;
+    z-index: 22;
+    font-size: 13px;
+    
+}
+
+
+.payment_layout {
+    grid-area: payment_side; 
+    background-color: #ece0d5;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card_group input {
+    position: relative;
+    top: 70px;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 30%;
+    background-color: transparent;
+    border: 2px #43281d solid;
+    padding: 12px;
+    border-radius: 30px;
+    
+}
+
+.card_group label{
+    display: block;
+    position: absolute;
+    top: 28%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    background: #ece0d5;
+    color: #7d5f4b;
+    border: 2px transparent;
+    z-index: 22;
+    font-size: 13px;
+    
+}
+
+.ccv_group input {
+    position: relative;
+    top: 90px;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 30%;
+    background-color: transparent;
+    border: 2px #43281d solid;
+    padding: 12px;
+    border-radius: 30px;
+    
+}
+
+.ccv_group label{
+    display: block;
+    position: absolute;
+    top: 64%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    background: #ece0d5;
+    color: #7d5f4b;
+    border: 2px transparent;
+    z-index: 22;
+    font-size: 13px;
+    
+}
+.tax_layout {
+    grid-area: tax_side;
+    background-color: #ece0d5;
+    padding: 10px;
+    height: 130px;
+    width: 400px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+/* height: 100px;
+    width: 300px;
+    margin: auto; */
+
+.place_order_layout {
+    grid-area: place_order;
+    background-color: #ddb892;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
